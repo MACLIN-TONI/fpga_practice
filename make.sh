@@ -7,12 +7,13 @@ if [ -z "$dut" ]; then
     exit 1
 fi
 
-mkdir -p "$dut"/{rtl,tb,sim,docs,waves}
+mkdir -p "$dut"/{rtl,tb,sim,docs,waves,constraint}
 
 cd "$dut" || exit 1
 
 touch "rtl/$dut.v"
 touch "tb/tb_$dut.v"
+touch "constraint/$dut.xdc"
 
 cat > Makefile <<EOF
 DUT ?= $dut
