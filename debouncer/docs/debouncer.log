@@ -1,21 +1,6 @@
 VCD info: dumpfile waves/dump.vcd opened for output.
-VCD warning: tb/tb_debouncer.v:70: $dumpfile called after $dumpvars started,
-                                   using existing file (waves/dump.vcd).
-VCD warning: ignoring signals in previously scanned scope tb_debouncer.
-VCD warning: ignoring signals in previously scanned scope tb_debouncer.dut.
-VCD warning: ignoring signals in previously scanned scope tb_debouncer.check_output.
-VCD warning: ignoring signals in previously scanned scope tb_debouncer.set_button.
-VCD warning: ignoring signals in previously scanned scope tb_debouncer.wait_cycles.
-PASS: Reset output is LOW
-PASS: Short pulse rejected
-PASS: Bouncing press rejected
-PASS: Stable press accepted
-FAIL: Bouncing release rejected | Expected=1 Actual=0
-PASS: Stable release accepted
-PASS: Press before reset
-PASS: Reset clears output
---------------------------------
-TOTAL PASS = 7
-TOTAL FAIL = 1
---------------------------------
-tb/tb_debouncer.v:133: $finish called at 756000 (1ps)
+PASS | button_out = 1 | exp = 1
+PASS | button_out = 0 | exp = 0
+PASS | button_out = 0 | exp = 0
+PASS | button_out = 1 | exp = 1
+tb/tb_debouncer.v:78: $finish called at 501000 (1ps)
