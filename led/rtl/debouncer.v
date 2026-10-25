@@ -1,7 +1,7 @@
 
 module debouncer #(
-    parameter integer CLK_FREQ_HZ = 50_000_000,
-    parameter integer DEBOUNCE_TIME_MS = 20
+    parameter integer CLK_FREQ_HZ = 1000,
+    parameter integer DEBOUNCE_TIME_MS = 5
 )(
     input  wire clk,
     input  wire rst_n,

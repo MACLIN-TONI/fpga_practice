@@ -1,0 +1,6 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+PASS | b1 = 0 | b2 = 0 | led_out = 0 | exp = 0
+PASS | b1 = 0 | b2 = 1 | led_out = 0 | exp = 0
+PASS | b1 = 1 | b2 = 0 | led_out = 1 | exp = 1
+PASS | b1 = 1 | b2 = 1 | led_out = 1 | exp = 1
+tb/tb_led.v:73: $finish called at 546000 (1ps)

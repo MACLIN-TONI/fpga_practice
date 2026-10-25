@@ -1,0 +1,375 @@
+$date
+	Sun Oct 25 13:00:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_led $end
+$var wire 1 ! led_out $end
+$var reg 1 " b1 $end
+$var reg 1 # b2 $end
+$var reg 1 $ clk $end
+$var reg 1 % rst_n $end
+$var integer 32 & FAIL [31:0] $end
+$var integer 32 ' PASS [31:0] $end
+$scope module dut $end
+$var wire 1 " b1 $end
+$var wire 1 # b2 $end
+$var wire 1 $ clk $end
+$var wire 1 % rst_n $end
+$var wire 1 ( p2 $end
+$var wire 1 ) p1 $end
+$var reg 1 ! led_out $end
+$scope module d1 $end
+$var wire 1 " button_in $end
+$var wire 1 $ clk $end
+$var wire 1 % rst_n $end
+$var parameter 32 * CLK_FREQ_HZ $end
+$var parameter 32 + COUNT_MAX $end
+$var parameter 32 , COUNT_WIDTH $end
+$var parameter 32 - DEBOUNCE_TIME_MS $end
+$var reg 1 ) button_out $end
+$var reg 3 . count [2:0] $end
+$var reg 1 / sync_1 $end
+$var reg 1 0 sync_2 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 # button_in $end
+$var wire 1 $ clk $end
+$var wire 1 % rst_n $end
+$var parameter 32 1 CLK_FREQ_HZ $end
+$var parameter 32 2 COUNT_MAX $end
+$var parameter 32 3 COUNT_WIDTH $end
+$var parameter 32 4 DEBOUNCE_TIME_MS $end
+$var reg 1 ( button_out $end
+$var reg 3 5 count [2:0] $end
+$var reg 1 6 sync_1 $end
+$var reg 1 7 sync_2 $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 8 i [31:0] $end
+$upscope $end
+$scope task check $end
+$var reg 1 9 exp $end
+$var reg 1 : t_b1 $end
+$var reg 1 ; t_b2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 4
+b11 3
+b101 2
+b1111101000 1
+b101 -
+b11 ,
+b101 +
+b1111101000 *
+$end
+#0
+$dumpvars
+x;
+x:
+x9
+bx 8
+07
+06
+b0 5
+00
+0/
+b0 .
+0)
+0(
+b0 '
+b0 &
+0%
+0$
+0#
+0"
+0!
+$end
+#5000
+1$
+#7000
+1%
+#10000
+0$
+#15000
+1$
+#20000
+0$
+#25000
+1$
+#28000
+b0 8
+#30000
+0;
+0:
+0$
+#35000
+1$
+#40000
+0$
+#45000
+1$
+#50000
+0$
+#55000
+1$
+#60000
+0$
+#65000
+1$
+#70000
+0$
+#75000
+1$
+#80000
+0$
+#85000
+1$
+#90000
+0$
+#95000
+1$
+#100000
+0$
+#105000
+1$
+#110000
+0$
+#115000
+1$
+#120000
+0$
+#125000
+09
+1$
+#126000
+b1 8
+b1 '
+#130000
+1#
+1;
+0$
+#135000
+16
+1$
+#140000
+0$
+#145000
+17
+1$
+#150000
+0$
+#155000
+b1 5
+1$
+#160000
+0$
+#165000
+b10 5
+1$
+#170000
+0$
+#175000
+b11 5
+1$
+#180000
+0$
+#185000
+b100 5
+1$
+#190000
+0$
+#195000
+b0 5
+1(
+1$
+#200000
+0$
+#205000
+1$
+#210000
+0$
+#215000
+1$
+#220000
+0$
+#225000
+1$
+#226000
+b10 8
+b10 '
+#230000
+0#
+1"
+0;
+1:
+0$
+#235000
+1/
+06
+1$
+#240000
+0$
+#245000
+07
+10
+1$
+#250000
+0$
+#255000
+b1 .
+b1 5
+1$
+#260000
+0$
+#265000
+b10 5
+b10 .
+1$
+#270000
+0$
+#275000
+b11 .
+b11 5
+1$
+#280000
+0$
+#285000
+b100 5
+b100 .
+1$
+#290000
+0$
+#295000
+1!
+b0 .
+1)
+b0 5
+0(
+1$
+#300000
+0$
+#305000
+1$
+#310000
+0$
+#315000
+1$
+#320000
+0$
+#325000
+19
+1$
+#326000
+b11 8
+b11 '
+#330000
+1#
+1;
+0$
+#335000
+16
+1$
+#340000
+0$
+#345000
+17
+1$
+#350000
+0$
+#355000
+b1 5
+1$
+#360000
+0$
+#365000
+b10 5
+1$
+#370000
+0$
+#375000
+b11 5
+1$
+#380000
+0$
+#385000
+b100 5
+1$
+#390000
+0$
+#395000
+b0 5
+1(
+1$
+#400000
+0$
+#405000
+1$
+#410000
+0$
+#415000
+1$
+#420000
+0$
+#425000
+1$
+#426000
+b100 8
+b100 '
+#430000
+0$
+#435000
+1$
+#440000
+0$
+#445000
+1$
+#450000
+0$
+#455000
+1$
+#460000
+0$
+#465000
+1$
+#470000
+0$
+#475000
+1$
+#480000
+0$
+#485000
+1$
+#490000
+0$
+#495000
+1$
+#500000
+0$
+#505000
+1$
+#510000
+0$
+#515000
+1$
+#520000
+0$
+#525000
+1$
+#530000
+0$
+#535000
+1$
+#540000
+0$
+#545000
+1$
+#546000

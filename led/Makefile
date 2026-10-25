@@ -1,6 +1,6 @@
 DUT ?= led
 
-RTL = rtl/$(DUT).v
+RTL = rtl/$(DUT).v rtl/debouncer.v
 TB = tb/tb_$(DUT).v
 TOP = tb_$(DUT)
 SIM = sim/sim.out
