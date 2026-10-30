@@ -1,0 +1,2 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+tb/tb_freq_div.v:31: $finish called at 307000 (1ps)

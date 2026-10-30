@@ -30,7 +30,6 @@ module digital_clock(
     parameter CLK_FREQ = 50_000_000;
     parameter FREQ_BITS = $clog2(CLK_FREQ);
     
-    reg [FREQ_BITS-1:0] sec_count;
     
     reg [5:0] sec;
     reg [5:0] min;
@@ -39,43 +38,71 @@ module digital_clock(
     wire [3:0] sec_tens;
     wire [3:0] min_ones;
     wire [3:0] min_tens;
+
+    wire real_clk;
+
+    freq_div fd(
+        .sys_clk(clk),
+        .areset_n(areset_n),
+        .real_clk(real_clk)
+    );
     
-    always @(posedge clk, negedge areset_n) begin
+    // always @(posedge clk, negedge areset_n) begin
+    //     if(!areset_n) begin
+    //         sec_count <= 0;
+    //         sec <= 0;
+    //     end
+    //     else if (sec_count == CLK_FREQ-1) begin
+    //         if(sec == 59) begin
+    //             sec <= 0;
+    //         end
+    //         else begin
+    //             sec <= sec + 1;
+    //         end
+    //         sec_count <= 0;
+    //     end
+    //     else begin
+    //         sec_count <= sec_count + 1;
+    //     end
+    // end
+
+    always @(posedge real_clk, negedge areset_n) begin
         if(!areset_n) begin
-            sec_count <= 0;
             sec <= 0;
+            min <= 0;
         end
-        else if (sec_count == CLK_FREQ-1) begin
-            if(sec == 59) begin
+        else if (sec == 59) begin
+            if(min == 59) begin
+                min <= 0;
                 sec <= 0;
             end
             else begin
-                sec <= sec + 1;
+                min <= min + 1;
+                sec <= 0;
             end
-            sec_count <= 0;
         end
         else begin
-            sec_count <= sec_count + 1;
+            sec <= sec + 1;
         end
     end
     
-    always @(posedge clk, negedge areset_n) begin
-        if(!areset_n) begin
-            min <= 0;
-        end
-        else if (sec == 59 && sec_count == CLK_FREQ-1) begin
-            if(min == 59) begin
-                min <= 0;
-            end
-            else begin
-                min <= min + 1;
-            end
+    // always @(posedge clk, negedge areset_n) begin
+    //     if(!areset_n) begin
+    //         min <= 0;
+    //     end
+    //     else if (sec == 59 && sec_count == CLK_FREQ-1) begin
+    //         if(min == 59) begin
+    //             min <= 0;
+    //         end
+    //         else begin
+    //             min <= min + 1;
+    //         end
             
-        end
-        else begin
-            min <= min;
-        end
-    end
+    //     end
+    //     else begin
+    //         min <= min;
+    //     end
+    // end
     
     assign sec_ones = sec % 10;
     assign sec_tens = sec / 10;

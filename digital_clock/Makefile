@@ -1,6 +1,7 @@
 DUT ?= digital_clock
 
-RTL = rtl/$(DUT).v
+//RTL = rtl/$(DUT).v rtl/freq_div.v rtl/seg_7.v
+RTL = rtl/freq_div.v 
 TB = tb/tb_$(DUT).v
 TOP = tb_$(DUT)
 SIM = sim/sim.out
